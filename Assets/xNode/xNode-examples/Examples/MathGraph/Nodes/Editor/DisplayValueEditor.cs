@@ -1,9 +1,10 @@
 ﻿using UnityEditor;
+using UnityEngine;
 using XNode.Examples.MathNodes;
 
 namespace XNodeEditor.Examples {
 
-    /// <summary> 
+    /// <summary>
     /// NodeEditor functions similarly to the Editor class, only it is xNode specific.
     /// Custom node editors should have the CustomNodeEditor attribute that defines which node type it is an editor for.
     /// </summary>
@@ -12,7 +13,7 @@ namespace XNodeEditor.Examples {
 
         /// <summary> Called whenever the xNode editor window is updated </summary>
         public override void OnBodyGUI() {
-            
+
             // Draw the default GUI first, so we don't have to do all of that manually.
             base.OnBodyGUI();
 
@@ -21,7 +22,17 @@ namespace XNodeEditor.Examples {
 
             // Get the value from the node, and display it
             object obj = displayValueNode.GetValue();
-            if (obj != null) EditorGUILayout.LabelField(obj.ToString());
+
+            if (obj != null)
+            {
+                var fontSize = EditorStyles.label.fontSize;
+                var fontStyle = EditorStyles.label.fontStyle;
+                EditorStyles.label.fontStyle = FontStyle.Bold;
+                EditorStyles.label.fontSize = fontSize + 5;
+                EditorGUILayout.LabelField(obj.ToString());
+                EditorStyles.label.fontStyle = fontStyle;
+                EditorStyles.label.fontSize = fontSize;
+            }
         }
     }
 }

@@ -62,11 +62,15 @@ namespace XNode.Examples.RuntimeMathNodes {
 				} else if (node is XNode.Examples.MathNodes.DisplayValue) {
 					runtimeNode = Instantiate(runtimeDisplayValuePrefab);
 				}
-				runtimeNode.transform.SetParent(scrollRect.content);
-				runtimeNode.node = node;
-				runtimeNode.graph = this;
-				nodes.Add(runtimeNode);
-			}
+
+                if (runtimeNode != null)
+                {
+                    runtimeNode.transform.SetParent(scrollRect.content);
+                    runtimeNode.node = node;
+                    runtimeNode.graph = this;
+                    nodes.Add(runtimeNode);
+                }
+            }
 		}
 
 		public UGUIMathBaseNode GetRuntimeNode(Node node) {

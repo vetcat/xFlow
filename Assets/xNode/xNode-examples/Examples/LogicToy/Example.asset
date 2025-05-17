@@ -100,7 +100,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   input: 0
-  output: 1
+  output: 0
 --- !u!114 &114463302483022418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: Not
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 88, y: -248}
+  position: {x: 136, y: -280}
   ports:
     keys:
     - input
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: Pulse
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 72}
+  position: {x: -264, y: 40}
   ports:
     keys:
     - output
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: Toggle
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 312, y: -88}
+  position: {x: 360, y: -72}
   ports:
     keys:
     - input
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: Toggle
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -72, y: -168}
+  position: {x: -56, y: -184}
   ports:
     keys:
     - input
@@ -295,7 +295,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  interval: 1.06
+  interval: 1
   output: 0
 --- !u!114 &114945579453429622
 MonoBehaviour:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: And
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 120, y: -88}
+  position: {x: 136, y: -104}
   ports:
     keys:
     - input

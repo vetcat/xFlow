@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XNode;
 using XNode.Examples;
 
 namespace XNodeEditor.Examples {
 	[CustomNodeGraphEditor(typeof(MathGraph))]
 	public class MathGraphEditor : NodeGraphEditor {
 
-		/// <summary> 
+		/// <summary>
 		/// Overriding GetNodeMenuName lets you control if and how nodes are categorized.
 	    /// In this example we are sorting out all node types that are not in the XNode.Examples namespace.
 		/// </summary>
@@ -16,5 +18,5 @@ namespace XNodeEditor.Examples {
 				return base.GetNodeMenuName(type).Replace("X Node/Examples/Math Nodes/", "");
 			} else return null;
 		}
-	}
+    }
 }
